@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/administrador_de_pacientes2/static/css/main.3becedc6.css",
+    "main.js": "/administrador_de_pacientes2/static/js/main.48481fc2.js",
+    "index.html": "/administrador_de_pacientes2/index.html",
+    "main.3becedc6.css.map": "/administrador_de_pacientes2/static/css/main.3becedc6.css.map",
+    "main.48481fc2.js.map": "/administrador_de_pacientes2/static/js/main.48481fc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3becedc6.css",
+    "static/js/main.48481fc2.js"
+  ]
+}
