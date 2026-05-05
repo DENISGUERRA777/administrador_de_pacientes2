@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Administrador de Pacientes 🐾
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application for managing veterinary appointments. Clinic staff can register new patient appointments, view a live list of pending appointments, and delete them once resolved — all without needing a backend, thanks to `localStorage` persistence.
+
+🔗 **Live demo:** [https://DENISGUERRA777.github.io/administrador_de_pacientes2](https://DENISGUERRA777.github.io/administrador_de_pacientes2)
+
+---
+
+## Features
+
+- **Create appointments** — fill in the pet's name, owner, date, time, and symptoms.
+- **View all appointments** — the appointment list updates in real time as you add entries.
+- **Delete appointments** — remove a resolved or cancelled appointment with one click.
+- **Persistent storage** — appointments are saved in the browser's `localStorage` so they survive page refreshes.
+- **Form validation** — all fields are required; an error message is shown when any field is left blank.
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| [React 18](https://reactjs.org/) | UI library |
+| [Create React App](https://create-react-app.dev/) | Project scaffolding & build tooling |
+| [uuid](https://github.com/uuidjs/uuid) | Unique IDs for each appointment |
+| [gh-pages](https://github.com/tschaub/gh-pages) | GitHub Pages deployment |
+| localStorage | Client-side data persistence |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js** ≥ 18 and **npm** ≥ 9
+
+### Installation
+
+```bash
+git clone https://github.com/DENISGUERRA777/administrador_de_pacientes2.git
+cd administrador_de_pacientes2
+npm install
+```
+
+---
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page reloads automatically when you save changes.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production into the `build/` folder. The output is minified and filenames include content hashes for optimal caching.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run deploy`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app and publishes it to the `gh-pages` branch, making it available at the live demo URL above.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+administrador_de_pacientes2/
+├── public/               # Static assets served as-is (index.html, favicon, etc.)
+├── src/
+│   ├── App.js            # Root component — manages appointment state & localStorage
+│   ├── index.js          # React entry point
+│   ├── index.css         # Global styles
+│   └── components/
+│       ├── Formulario.js # Appointment creation form with validation
+│       └── Cita.js       # Single appointment card with a delete button
+├── package.json
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
